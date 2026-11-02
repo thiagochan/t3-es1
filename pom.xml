@@ -2,17 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
+	<!-- O pai do Spring Boot só fornece as versões das bibliotecas (H2, HikariCP, Jackson, JUnit...).
+	     Apenas o módulo MyEnderecoServicos usa o Spring de fato. -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>4.1.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>unioeste</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>t3-es1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name/>
-	<description/>
+	<packaging>pom</packaging>
+	<name>t3-es1</name>
+	<description>T3 - Engenharia de Software I: serviços de Endereço (T3B) e classes de negócio do IR (T3A)</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -26,97 +31,51 @@
 		<tag/>
 		<url/>
 	</scm>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-h2console</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-session-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc</artifactId>
-		</dependency>
 
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-session-jdbc-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+	<!-- Ordem de dependência: BO -> Infra -> ServicosImpl -> Servicos / Teste -->
+	<modules>
+		<module>MyEnderecoBO</module>
+		<module>MyPessoaBO</module>
+		<module>MyImpostoRendaBO</module>
+		<module>MyInfraAPI</module>
+		<module>MyEnderecoServicosImpl</module>
+		<module>MyEnderecoServicos</module>
+		<module>MyEnderecoTeste</module>
+	</modules>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>default-compile</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-						<configuration>
-							<annotationProcessorPaths>
-								<path>
-									<groupId>org.projectlombok</groupId>
-									<artifactId>lombok</artifactId>
-								</path>
-							</annotationProcessorPaths>
-						</configuration>
-					</execution>
-					<execution>
-						<id>default-testCompile</id>
-						<phase>test-compile</phase>
-						<goals>
-							<goal>testCompile</goal>
-						</goals>
-						<configuration>
-							<annotationProcessorPaths>
-								<path>
-									<groupId>org.projectlombok</groupId>
-									<artifactId>lombok</artifactId>
-								</path>
-							</annotationProcessorPaths>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+	<!-- Versão única dos módulos internos, para os poms dos módulos não repetirem a versão -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>unioeste</groupId>
+				<artifactId>MyEnderecoBO</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>unioeste</groupId>
+				<artifactId>MyPessoaBO</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>unioeste</groupId>
+				<artifactId>MyImpostoRendaBO</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>unioeste</groupId>
+				<artifactId>MyInfraAPI</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>unioeste</groupId>
+				<artifactId>MyEnderecoServicosImpl</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 </project>

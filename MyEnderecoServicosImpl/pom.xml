@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>unioeste</groupId>
+		<artifactId>t3-es1</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>MyEnderecoServicosImpl</artifactId>
+	<name>MyEnderecoServicosImpl</name>
+	<description>Projeto 3 - implementação dos serviços de endereço: manager, cols e daos</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>unioeste</groupId>
+			<artifactId>MyEnderecoBO</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>unioeste</groupId>
+			<artifactId>MyInfraAPI</artifactId>
+		</dependency>
+		<!-- Jackson 3: leitura do JSON devolvido pelo ViaCEP -->
+		<dependency>
+			<groupId>tools.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

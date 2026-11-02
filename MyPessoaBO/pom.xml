@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>unioeste</groupId>
+		<artifactId>t3-es1</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>MyPessoaBO</artifactId>
+	<name>MyPessoaBO</name>
+	<description>T3A - classes de negócio genéricas de pessoa (Pessoa, PessoaFisica, PessoaJuridica...)</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>unioeste</groupId>
+			<artifactId>MyEnderecoBO</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

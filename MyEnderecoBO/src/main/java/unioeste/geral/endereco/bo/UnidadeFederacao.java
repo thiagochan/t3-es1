@@ -1,0 +1,31 @@
+package unioeste.geral.endereco.bo;
+
+import java.io.Serializable;
+
+/**
+ * Unidade da Federação (estado). No banco: tabela UnidadeFederativa, cuja chave é a sigla.
+ */
+public class UnidadeFederacao implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    /** Sigla da UF (ex.: PR). É a chave da tabela UnidadeFederativa. */
+    private String sigla;
+    private String nome;
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+}
