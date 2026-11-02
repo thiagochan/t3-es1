@@ -15,13 +15,6 @@ import unioeste.geral.endereco.exception.EnderecoException;
 import java.sql.Connection;
 import java.util.List;
 
-/**
- * Serviços de endereço (caso de uso Manter Endereço), para uso genérico em outras aplicações.
- *
- * <p>Cada método é um serviço lógico. O manager não tem SQL nem regra própria: valida com
- * as Cols, pega a conexão do pool, chama Cols e DAOs e controla a transação.
- * Erro de validação: {@link EnderecoException}. Erro de infraestrutura (banco, rede): Exception.
- */
 public class UCEnderecoGeralServicos {
 
     private final ColEndereco colEndereco = new ColEndereco();

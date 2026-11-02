@@ -13,11 +13,6 @@ import unioeste.geral.endereco.manager.UCEnderecoGeralServicos;
 
 import java.util.List;
 
-/**
- * Expõe os serviços de UCEnderecoGeralServicos via REST/JSON.
- * Cada endpoint tem o nome do serviço lógico e só repassa a chamada para o manager:
- * não há regra de negócio aqui. Os erros são convertidos em HTTP pelo {@link TratadorErros}.
- */
 @RestController
 @RequestMapping("/endereco")
 public class EnderecoController {

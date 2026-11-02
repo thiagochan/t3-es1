@@ -3,8 +3,6 @@ package unioeste.geral.endereco.exception;
 /**
  * Erro de validação ou de regra de negócio dos serviços de endereço
  * (CEP inválido, dado em branco, cidade inexistente...).
- *
- * <p>Erros de infraestrutura (banco, rede) não usam esta classe: chegam como Exception.
  */
 public class EnderecoException extends Exception {
 
