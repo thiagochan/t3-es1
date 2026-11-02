@@ -4,9 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import unioeste.geral.endereco.bo.UnidadeFederacao;
 
-/**
- * Documento de identidade (RG) de uma pessoa física.
- */
 public class RGIdentidadePessoal implements Serializable {
 
     private static final long serialVersionUID = 1L;

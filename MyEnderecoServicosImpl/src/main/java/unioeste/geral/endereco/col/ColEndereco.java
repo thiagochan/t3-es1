@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.regex.Pattern;
 
-/** Regras de negócio do Endereco. */
 public class ColEndereco {
 
     /** 8 dígitos, com ou sem hífen: 85851000 ou 85851-000. */
@@ -21,8 +20,6 @@ public class ColEndereco {
 
     /**
      * Valida o formato do CEP.
-     *
-     * @return o CEP só com os 8 dígitos, que é como ele fica gravado no banco
      */
     public String validarCep(String cep) throws EnderecoException {
         if (Validacao.vazio(cep)) {

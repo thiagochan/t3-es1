@@ -8,7 +8,6 @@ import unioeste.geral.endereco.manager.UCEnderecoGeralServicos;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-/** Testes do serviço obterEnderecoPorID. */
 class ObterEnderecoPorIDTest {
 
     private final UCEnderecoGeralServicos servicos = new UCEnderecoGeralServicos();

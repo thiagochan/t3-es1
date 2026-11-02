@@ -15,22 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-/**
- * Ponto único de acesso ao SGBD. Cria o pool de conexões (HikariCP) uma única vez
- * e entrega conexões para quem pedir.
- *
- * <p>A configuração é lida do arquivo {@code /db.properties} no classpath:
- * <ul>
- *   <li>{@code db.url}, {@code db.usuario}, {@code db.senha}: conexão JDBC;</li>
- *   <li>{@code db.pool.max} (opcional): tamanho máximo do pool, padrão 10;</li>
- *   <li>{@code db.scripts} (opcional): scripts SQL do classpath, separados por vírgula,
- *       executados uma única vez, logo depois de criar o pool.</li>
- * </ul>
- *
- * <p>Com o H2 em memória o banco começa vazio a cada execução, por isso os scripts
- * criam as tabelas e carregam os dados iniciais. Esta classe não conhece nenhuma
- * tabela: quem define os scripts é o projeto que usa a infraestrutura.
- */
 public final class ConexaoBD {
 
     private static final String ARQUIVO_CONFIGURACAO = "/db.properties";
@@ -40,20 +24,14 @@ public final class ConexaoBD {
     private ConexaoBD() {
     }
 
-    /**
-     * Devolve uma conexão do pool. Use sempre com try-with-resources: o close()
-     * não fecha a conexão de verdade, ele a devolve ao pool.
-     */
     public static Connection getConnection() throws SQLException {
         return obterPool().getConnection();
     }
 
-    /** Cria o pool e executa os scripts já na subida da aplicação, em vez de na primeira chamada. */
     public static void inicializar() throws SQLException {
         obterPool();
     }
 
-    /** Fecha o pool e todas as suas conexões. */
     public static synchronized void fechar() {
         if (pool != null) {
             pool.close();
@@ -125,10 +103,6 @@ public final class ConexaoBD {
         }
     }
 
-    /**
-     * Lê um script SQL do classpath e o separa em comandos pelo ";".
-     * Linhas que começam com "--" são comentários e são ignoradas.
-     */
     static List<String> lerComandos(String recurso) throws SQLException {
         InputStream in = ConexaoBD.class.getResourceAsStream(recurso);
         if (in == null) {

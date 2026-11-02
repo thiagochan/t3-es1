@@ -9,14 +9,6 @@ import unioeste.geral.endereco.bo.UnidadeFederacao;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * Montagem de dados para os testes.
- *
- * <p>O H2 é o mesmo para todas as classes de teste (mesma JVM), então cada teste que
- * grava algo usa um CEP diferente para não depender da ordem de execução.
- * Dados que já vêm de endereco-dados.sql: cidade 1 = Foz do Iguaçu/PR, endereço 1 =
- * Avenida Brasil, Centro, CEP 85851000.
- */
 final class Dados {
 
     private static final AtomicInteger PROXIMO_CEP = new AtomicInteger(99000001);

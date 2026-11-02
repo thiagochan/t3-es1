@@ -14,7 +14,6 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 
-	/** Cria o pool de conexões e as tabelas do H2 assim que a aplicação sobe. */
 	@EventListener(ApplicationReadyEvent.class)
 	public void inicializarBanco() throws SQLException {
 		ConexaoBD.inicializar();

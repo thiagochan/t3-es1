@@ -13,10 +13,6 @@ import unioeste.geral.endereco.bo.UnidadeFederacao;
 
 import java.io.IOException;
 
-/**
- * Acesso a dados de endereço numa fonte externa: o webservice ViaCEP.
- * É um DAO como os outros, só que a fonte dos dados é um serviço na web em vez do banco.
- */
 public class EnderecoExternoDAO {
 
     private static final String URL_VIACEP = "https://viacep.com.br/ws/%s/json/";

@@ -2,9 +2,6 @@ package unioeste.ir.bo;
 
 import java.io.Serializable;
 
-/**
- * Tipo de rendimento (salário, pró-labore, aposentadoria...).
- */
 public class TipoRendimento implements Serializable {
 
     private static final long serialVersionUID = 1L;

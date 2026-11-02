@@ -2,9 +2,6 @@ package unioeste.geral.pessoa.bo;
 
 import java.io.Serializable;
 
-/**
- * Sexo de uma pessoa física (ex.: sexo "F", descrição "Feminino").
- */
 public class Sexo implements Serializable {
 
     private static final long serialVersionUID = 1L;

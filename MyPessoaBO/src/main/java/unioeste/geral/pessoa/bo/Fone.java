@@ -2,9 +2,6 @@ package unioeste.geral.pessoa.bo;
 
 import java.io.Serializable;
 
-/**
- * Telefone de uma pessoa.
- */
 public class Fone implements Serializable {
 
     private static final long serialVersionUID = 1L;

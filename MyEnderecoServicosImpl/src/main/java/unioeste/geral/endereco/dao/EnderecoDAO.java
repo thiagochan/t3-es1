@@ -15,10 +15,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * SQL da tabela Endereco. As consultas fazem JOIN com cidade, UF, bairro, logradouro
- * e tipo de logradouro para devolver o objeto Endereco completo.
- */
 public class EnderecoDAO {
 
     private static final String SELECT_ENDERECO =

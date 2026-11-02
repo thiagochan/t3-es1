@@ -3,18 +3,14 @@ package unioeste.ir.bo;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-/**
- * Bem ou direito declarado.
- */
+
 public class Bem implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private int idBem;
     private String nomeBem;
-    /** Valor do bem em 31/12 do ano da declaração (valorAtual no MER). */
     private BigDecimal valorBem;
-    /** Valor do bem em 31/12 do ano anterior. */
     private BigDecimal valorAnoAnterior;
     private TipoBem tipoBem;
 

@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/** SQL da tabela Cidade. As consultas já trazem a UF junto (JOIN). */
 public class CidadeDAO {
 
     private static final String SELECT_CIDADE =

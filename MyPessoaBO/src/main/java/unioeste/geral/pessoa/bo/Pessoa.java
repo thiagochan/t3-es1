@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import unioeste.geral.endereco.bo.EnderecoEspecifico;
 
-/**
- * Pessoa genérica: dados comuns a pessoas físicas e jurídicas.
- */
 public abstract class Pessoa implements Serializable {
 
     private static final long serialVersionUID = 1L;

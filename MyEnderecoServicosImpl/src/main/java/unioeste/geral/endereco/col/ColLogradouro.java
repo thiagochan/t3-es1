@@ -9,13 +9,12 @@ import unioeste.geral.endereco.exception.EnderecoException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/** Regras de negócio do Logradouro e do seu tipo. */
 public class ColLogradouro {
 
     private final LogradouroDAO logradouroDAO = new LogradouroDAO();
     private final TipoLogradouroDAO tipoLogradouroDAO = new TipoLogradouroDAO();
 
-    /** O logradouro precisa vir com o id ou com o nome e a sigla do tipo. Não acessa o banco. */
+    /** O logradouro precisa vir com o id ou com o nome e a sigla do tipo. */
     public void validarDados(Logradouro logradouro) throws EnderecoException {
         if (logradouro == null) {
             throw new EnderecoException("Logradouro não informado");
@@ -34,7 +33,6 @@ public class ColLogradouro {
     }
 
     /**
-     * Usado no cadastro de endereço.
      * Com id: o logradouro precisa existir. Sem id: o tipo precisa existir; reaproveita
      * o logradouro de mesmo nome e tipo ou cadastra um novo.
      */

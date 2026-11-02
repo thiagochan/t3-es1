@@ -12,9 +12,7 @@ public class PessoaFisica extends Pessoa implements Serializable {
 
     private String primeiroNome;
     private String sobreNome;
-    /** CPF só com os 11 dígitos. */
     private String cpf;
-    /** Data de nascimento (campo dtNascimento do MER). */
     private LocalDate dataNascimento;
     private RGIdentidadePessoal rg;
     private Sexo sexo;
