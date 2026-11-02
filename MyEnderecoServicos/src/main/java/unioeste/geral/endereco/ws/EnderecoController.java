@@ -19,19 +19,19 @@ public class EnderecoController {
 
     private final UCEnderecoGeralServicos servicos = new UCEnderecoGeralServicos();
 
-    /** POST /endereco/cadastrarEndereco, com o Endereco em JSON no corpo. */
+    /* POST /endereco/cadastrarEndereco */
     @PostMapping("/cadastrarEndereco")
     public Endereco cadastrarEndereco(@RequestBody Endereco endereco) throws Exception {
         return servicos.cadastrarEndereco(endereco);
     }
 
-    /** GET /endereco/obterEnderecoPorCEP/{cep} */
+    /* GET /endereco/obterEnderecoPorCEP/{cep} */
     @GetMapping("/obterEnderecoPorCEP/{cep}")
     public List<Endereco> obterEnderecoPorCEP(@PathVariable("cep") String cep) throws Exception {
         return servicos.obterEnderecoPorCEP(cep);
     }
 
-    /** GET /endereco/obterEnderecoPorID/{id} */
+    /* GET /endereco/obterEnderecoPorID/{id} */
     @GetMapping("/obterEnderecoPorID/{id}")
     public Endereco obterEnderecoPorID(@PathVariable("id") int id) throws Exception {
         Endereco endereco = new Endereco();
@@ -39,13 +39,13 @@ public class EnderecoController {
         return servicos.obterEnderecoPorID(endereco);
     }
 
-    /** GET /endereco/obterEnderecoExterno/{cep} (consulta o ViaCEP) */
+    /** GET /endereco/obterEnderecoExterno/{cep} */
     @GetMapping("/obterEnderecoExterno/{cep}")
     public EnderecoEspecifico obterEnderecoExterno(@PathVariable("cep") String cep) throws Exception {
         return servicos.obterEnderecoExterno(cep);
     }
 
-    /** GET /endereco/obterCidade/{id} */
+    /* GET /endereco/obterCidade/{id} */
     @GetMapping("/obterCidade/{id}")
     public Cidade obterCidade(@PathVariable("id") int id) throws Exception {
         Cidade cidade = new Cidade();

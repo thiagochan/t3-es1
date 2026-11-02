@@ -2,9 +2,6 @@ package unioeste.geral.endereco.bo;
 
 import java.io.Serializable;
 
-/**
- * Bairro de um endereço.
- */
 public class Bairro implements Serializable {
 
     private static final long serialVersionUID = 1L;
