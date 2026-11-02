@@ -2,15 +2,12 @@ package unioeste.geral.endereco.bo;
 
 import java.io.Serializable;
 
-/**
- * Logradouro (nome da rua/avenida) e o seu tipo.
- */
 public class Logradouro implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private int idLogradouro;
-    /** Nome sem o tipo (ex.: Brasil, para Avenida Brasil). */
+
     private String nome;
     private TipoLogradouro tipoLogradouro;
 

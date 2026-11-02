@@ -2,15 +2,11 @@ package unioeste.geral.endereco.bo;
 
 import java.io.Serializable;
 
-/**
- * Endereço genérico identificado pelo CEP. Número e complemento ficam em {@link EnderecoEspecifico}.
- */
 public class Endereco implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private int idEndereco;
-    /** CEP só com os 8 dígitos (String para não perder o zero à esquerda). */
     private String cep;
     private Cidade cidade;
     private Bairro bairro;

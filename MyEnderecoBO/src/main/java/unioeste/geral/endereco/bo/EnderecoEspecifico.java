@@ -2,9 +2,6 @@ package unioeste.geral.endereco.bo;
 
 import java.io.Serializable;
 
-/**
- * Endereço de uma pessoa: o endereço genérico mais o número e o complemento.
- */
 public class EnderecoEspecifico implements Serializable {
 
     private static final long serialVersionUID = 1L;
