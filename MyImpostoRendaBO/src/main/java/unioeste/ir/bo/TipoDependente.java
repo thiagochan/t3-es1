@@ -2,9 +2,6 @@ package unioeste.ir.bo;
 
 import java.io.Serializable;
 
-/**
- * Tipo de dependência (cônjuge, filho(a), enteado(a)...).
- */
 public class TipoDependente implements Serializable {
 
     private static final long serialVersionUID = 1L;

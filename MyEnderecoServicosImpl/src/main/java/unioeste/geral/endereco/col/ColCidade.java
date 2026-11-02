@@ -9,13 +9,12 @@ import unioeste.geral.endereco.exception.EnderecoException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/** Regras de negócio da Cidade. */
 public class ColCidade {
 
     private final CidadeDAO cidadeDAO = new CidadeDAO();
     private final UnidadeFederacaoDAO unidadeFederacaoDAO = new UnidadeFederacaoDAO();
 
-    /** A cidade precisa vir com o id ou com o nome e a sigla da UF. Não acessa o banco. */
+    /** A cidade precisa vir com o id ou com o nome e a sigla da UF.  */
     public void validarDados(Cidade cidade) throws EnderecoException {
         if (cidade == null) {
             throw new EnderecoException("Cidade não informada");
@@ -32,7 +31,7 @@ public class ColCidade {
         }
     }
 
-    /** Validação do parâmetro do serviço obterCidade: objeto Cidade com o id preenchido. */
+    /** objeto Cidade com o id preenchido. */
     public void validarId(Cidade cidade) throws EnderecoException {
         if (cidade == null || cidade.getIdCidade() <= 0) {
             throw new EnderecoException("Informe um id de cidade válido");
@@ -49,7 +48,6 @@ public class ColCidade {
     }
 
     /**
-     * Usado no cadastro de endereço.
      * Com id: a cidade precisa existir. Sem id: reaproveita a cidade de mesmo nome e UF
      * ou cadastra uma nova (a UF precisa existir).
      */

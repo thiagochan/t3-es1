@@ -8,10 +8,6 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 
-/**
- * Cliente HTTP genérico para consultar serviços externos (ex.: ViaCEP).
- * Usa o HttpClient do próprio Java, sem bibliotecas extras.
- */
 public final class ClienteHttp {
 
     private static final Duration TEMPO_LIMITE = Duration.ofSeconds(10);
@@ -24,7 +20,6 @@ public final class ClienteHttp {
     private ClienteHttp() {
     }
 
-    /** Faz um GET na URL e devolve o status e o corpo da resposta (lido como UTF-8). */
     public static RespostaHttp get(String url) throws IOException, InterruptedException {
         HttpRequest requisicao = HttpRequest.newBuilder(URI.create(url))
                 .timeout(TEMPO_LIMITE)

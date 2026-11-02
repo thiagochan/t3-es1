@@ -7,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/** SQL da tabela TipoLogradouro. */
 public class TipoLogradouroDAO {
 
     /** Busca o tipo pela sigla (ex.: AV). Retorna null se não existir. */

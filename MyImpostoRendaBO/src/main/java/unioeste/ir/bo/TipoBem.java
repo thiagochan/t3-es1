@@ -2,9 +2,6 @@ package unioeste.ir.bo;
 
 import java.io.Serializable;
 
-/**
- * Tipo de bem (imóvel, veículo, aplicação financeira...).
- */
 public class TipoBem implements Serializable {
 
     private static final long serialVersionUID = 1L;

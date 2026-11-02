@@ -2,7 +2,6 @@ package unioeste.geral.endereco.col;
 
 import unioeste.geral.endereco.exception.EnderecoException;
 
-/** Verificações simples usadas por todas as Cols. */
 final class Validacao {
 
     private Validacao() {

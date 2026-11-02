@@ -7,12 +7,11 @@ import unioeste.geral.endereco.exception.EnderecoException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/** Regras de negócio do Bairro. */
 public class ColBairro {
 
     private final BairroDAO bairroDAO = new BairroDAO();
 
-    /** O bairro precisa vir com o id ou com o nome. Não acessa o banco. */
+    /** O bairro precisa vir com o id ou com o nome. */
     public void validarDados(Bairro bairro) throws EnderecoException {
         if (bairro == null) {
             throw new EnderecoException("Bairro não informado");

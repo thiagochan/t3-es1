@@ -7,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/** SQL da tabela UnidadeFederativa. */
 public class UnidadeFederacaoDAO {
 
     /** Busca a UF pela sigla. Retorna null se não existir. */

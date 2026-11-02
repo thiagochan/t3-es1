@@ -2,9 +2,6 @@ package unioeste.geral.pessoa.bo;
 
 import java.io.Serializable;
 
-/**
- * E-mail de uma pessoa.
- */
 public class Email implements Serializable {
 
     private static final long serialVersionUID = 1L;

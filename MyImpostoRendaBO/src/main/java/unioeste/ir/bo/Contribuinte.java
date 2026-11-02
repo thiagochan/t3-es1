@@ -5,15 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import unioeste.geral.pessoa.bo.PessoaFisica;
 
-/**
- * Contribuinte do Imposto de Renda (pessoa física titular da declaração).
- */
 public class Contribuinte extends PessoaFisica implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private int idContribuinte;
-    /** O contribuinte pode não ter nenhum ou ter vários dependentes. */
+
     private List<Dependente> dependentes = new ArrayList<>();
 
     public int getIdContribuinte() {

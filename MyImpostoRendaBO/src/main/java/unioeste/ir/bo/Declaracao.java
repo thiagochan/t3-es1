@@ -4,15 +4,12 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Declaração anual de um contribuinte, com os seus bens e rendimentos.
- */
 public class Declaracao implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private int idDeclaracao;
-    /** Ano da declaração (anoReferente no MER). */
+
     private int ano;
     private Contribuinte contribuinte;
     private List<Bem> bens = new ArrayList<>();

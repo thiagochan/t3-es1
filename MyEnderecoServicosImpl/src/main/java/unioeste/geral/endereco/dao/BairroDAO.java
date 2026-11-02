@@ -8,7 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/** SQL da tabela Bairro. */
 public class BairroDAO {
 
     /** Busca o bairro pelo id. Retorna null se não existir. */

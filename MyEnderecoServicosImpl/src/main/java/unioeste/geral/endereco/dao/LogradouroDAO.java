@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/** SQL da tabela Logradouro. As consultas já trazem o tipo junto (JOIN). */
 public class LogradouroDAO {
 
     private static final String SELECT_LOGRADOURO =

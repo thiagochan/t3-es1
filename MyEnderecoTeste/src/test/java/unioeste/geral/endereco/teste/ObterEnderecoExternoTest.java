@@ -14,13 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
-/**
- * Testes do serviço obterEnderecoExterno.
- *
- * <p>A maioria usa uma fonte falsa, que devolve um JSON fixo no formato do ViaCEP, para
- * o teste não depender da internet. O último teste chama o ViaCEP de verdade e só roda
- * se houver conexão.
- */
 class ObterEnderecoExternoTest {
 
     private static final String JSON_AVENIDA_BRASIL = """

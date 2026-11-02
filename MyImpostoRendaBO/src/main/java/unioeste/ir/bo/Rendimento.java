@@ -3,23 +3,17 @@ package unioeste.ir.bo;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-/**
- * Rendimento tributável recebido de pessoa jurídica.
- */
+
 public class Rendimento implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private int idRendimento;
     private BigDecimal valorTotalRecebido;
-    /** Contribuição previdenciária oficial. */
     private BigDecimal inss;
-    /** Imposto de renda retido na fonte. */
     private BigDecimal irrfPago;
-    /** Valor do 13º salário. */
     private BigDecimal valorDecimoTerceiro;
     private TipoRendimento tipoRendimento;
-    /** Empresa (fonte pagadora) que pagou o rendimento. */
     private Empresa empresa;
 
     public int getIdRendimento() {

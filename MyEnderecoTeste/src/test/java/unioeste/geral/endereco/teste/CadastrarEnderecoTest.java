@@ -14,7 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/** Testes do serviço cadastrarEndereco. */
 class CadastrarEnderecoTest {
 
     private final UCEnderecoGeralServicos servicos = new UCEnderecoGeralServicos();
