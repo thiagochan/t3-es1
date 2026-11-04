@@ -9,16 +9,6 @@ import unioeste.geral.endereco.exception.EnderecoException;
 
 import java.util.Map;
 
-/**
- * Converte as exceções dos serviços em respostas HTTP com JSON {"erro": "mensagem"}.
- *
- * <ul>
- *   <li>EnderecoException (validação / regra de negócio) → 400 Bad Request;</li>
- *   <li>qualquer outra Exception (banco, rede) → 500 Internal Server Error.</li>
- * </ul>
- * Estender ResponseEntityExceptionHandler mantém as respostas padrão do Spring para erros
- * de requisição (JSON malformado, rota inexistente...), em vez de virarem 500.
- */
 @RestControllerAdvice
 public class TratadorErros extends ResponseEntityExceptionHandler {
 

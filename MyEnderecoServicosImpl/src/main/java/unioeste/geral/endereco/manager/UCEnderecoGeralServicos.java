@@ -36,10 +36,8 @@ public class UCEnderecoGeralServicos {
     /**
      * Inclui um novo endereço.
      *
-     * <p>Valida CEP e dados em branco; a cidade, o bairro e o logradouro podem vir pelo id
-     * (precisam existir) ou pelo nome (são reaproveitados ou cadastrados). Tudo roda numa
-     * única transação: se algo falhar, nada fica gravado.
-     *
+     * Valida CEP e dados em branco; a cidade, o bairro e o logradouro podem vir pelo id
+     *  ou pelo nome
      * @return o endereço gravado, com o id gerado e os dados completos
      */
     public Endereco cadastrarEndereco(Endereco endereco) throws EnderecoException, Exception {
@@ -80,7 +78,7 @@ public class UCEnderecoGeralServicos {
     /**
      * Dado um CEP, busca o endereço no webservice ViaCEP.
      *
-     * <p>O resultado é completado com a base local: se a cidade, o bairro ou o logradouro já
+     * O resultado é completado com a base local: se a cidade, o bairro ou o logradouro já
      * existirem, os ids são preenchidos. O EnderecoEspecifico volta sem número e complemento,
      * que o usuário informa na tela antes de cadastrar.
      */
